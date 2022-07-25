@@ -133,4 +133,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-NASA_API_KEY = config('NASA_API_KEY', default='')
+NASA_API_KEY = config('NASA_API_KEY', default='DEMO_KEY')
