@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture of the Day</title>
+    <!-- Bootstrap link, if desired -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- connect to static folder css file -->
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>NASA Astronomy Picture of the Day</h1>
+            <h2 id="title"></h2>
+            <h3>Date: <span id="date">{{ date }}</span></h3>
+            <img id="hdurl" src="{{ hdurl }}" alt="NASA Picture of the Day" class="img-fluid img-thumbnail">
+            <p id="explanation">{{ explanation }}</p>
+        </div>
+    </div>
+
+</body>
+</html>
