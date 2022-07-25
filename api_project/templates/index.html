@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picture of the Day</title>
-    <!-- Bootstrap link, if desired -->
+    {% load static %}
+    <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- connect to static folder css file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
-<body style="font-family: Helvetica;">
+<body id="background" style="background: black;">
     <div class="container mt-4">
         <div class="jumbotron text-center">
             <h1>NASA Astronomy Picture of the Day</h1>
@@ -19,7 +21,18 @@
                 <img id="hdurl" src="{{ hdurl }}" alt="NASA Picture of the Day" class="img-fluid img-thumbnail">
                 <figcaption class="figure-caption">Photo Credit: {{ credit }}</figcaption>
             </figure>
-            <p id="explanation">{{ explanation }}</p>
+            <p id="explanation" class="mb-5">{{ explanation }}</p>
+
+            <div class="links">
+                <ul class="nav nav-pills d-flex justify-content-between">
+                    <li class="btn btn-sm btn-outline-dark">
+                        <a href="#" class="nav-link">Previous POD</a>
+                    </li>
+                    <li class="btn btn-sm btn-outline-dark">
+                        <a href="#" class="nav-link">Search for POD</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
