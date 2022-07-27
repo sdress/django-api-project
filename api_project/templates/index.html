@@ -18,12 +18,16 @@
             <h3>Date: <span id="date">{{ date }}</span></h3>
             <figure class="figure my-5">
                 <h2 id="title">"{{ title }}"</h2>
-                <img id="hdurl" src="{{ hdurl }}" alt="NASA Picture of the Day" class="img-fluid img-thumbnail">
-            {% if 'copyright' in nasa_data %}
-                <figcaption class="figure-caption">Photo Credit: {{ credit }}</figcaption>
-            {% else %}
-                <figcaption class="figure-caption">All photo copyrights belong to NASA</figcaption>
-            {% endif %}
+                {% if hdurl %}
+                    <img id="hdurl" src="{{ hdurl }}" alt="NASA Picture of the Day" class="img-fluid img-thumbnail">
+                {% else %}
+                    <img id="url" src="{{ url }}" alt="NASA Picture of the Day" class="img-fluid img-thumbnail">
+                {% endif %}
+                {% if 'copyright' %}
+                    <figcaption class="figure-caption">Photo Credit: {{ copyright }}</figcaption>
+                {% else %}
+                    <figcaption class="figure-caption">All photo copyrights belong to NASA</figcaption>
+                {% endif %}
             </figure>
             <p id="explanation" class="mb-5">{{ explanation }}</p>
 
